@@ -76,3 +76,30 @@ unsigned int nextPowerOf2(unsigned int n)
 
     return power;
 }
+
+// Prime Numbers : Sieve
+// Filling sieve array of given size
+// If prime  -> sieve[i] = 0
+// Otherwise -> sieve[i] = 1
+void makeSieve(unsigned int* sieve,unsigned int size){
+
+    memset(sieve,0,sizeof(sieve));    //requires string.h
+
+    unsigned int j;
+    sieve[0] = 1;
+    sieve[1] = 1;
+    unsigned int root = (unsigned int)sqrt(size);  //require math.h
+
+    //making sieve
+    for(unsigned int i=2; i<=root; i++){
+        if(sieve[i] == 0){
+            j = i+i;                //optimization : j = i*i   
+            while(j < MAXN){
+                if(sieve[j] == 0){
+                    sieve[j] = 1;
+                } 
+                j = j+i;
+            }   
+        }
+    }
+}
