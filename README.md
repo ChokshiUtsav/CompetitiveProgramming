@@ -1,2 +1,2 @@
 # CompetitiveProgramming
-This repository contains my programs done by me in various coding competitions
+This repository contains C++ programs in various coding platforms/competitions done by me.
