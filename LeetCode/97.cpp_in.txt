@@ -1,0 +1,5 @@
+4
+aa aa aaaa
+aa ab aaba
+ab ab abac
+ab ab baba

@@ -1,0 +1,40 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label":"build",
+            "type": "shell",
+            "command": "g++",
+            "args":[
+                "-Wall", "${file}", "-o", "${file}.out"
+            ],
+            "presentation": {
+                "reveal":"silent"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "exec-with-input-output",
+            "type": "shell",
+            "presentation": {
+                "reveal":"silent"
+            },
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "command": "${file}.out",
+            "args": [
+                "<", "${file}_in.txt", ">" , "${file}_out.txt" 
+            ]
+        },
+        {
+            "label":"exec-without-input-ouput",
+            "type": "shell",
+            "command": "${file}.out"
+        }
+    ]    
+}

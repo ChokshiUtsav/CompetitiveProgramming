@@ -1,0 +1,14 @@
+# Created by https://www.gitignore.io/api/c++
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Executables
+*.exe
+*.out
+*.app
+
+# End of https://www.gitignore.io/api/c++
