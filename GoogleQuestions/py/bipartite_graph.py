@@ -7,8 +7,8 @@ Graph is undirected (can have multiple components)
 
 """
 Solution Analysis :
-Time Complexity : O(v^2) where V is number of vertices
-Space Complexity : O(V)
+Time Complexity : O(V+E) as we are going through all vertices and edges
+Space Complexity : O(V+E) as we are preparing adjacency list
 """
 
 from collections import defaultdict, deque
